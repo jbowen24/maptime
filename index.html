@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>presentation</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+
+        <script type='text/javascript'>
+        window.onload = function() {
+    var playing = false;
+    var playrate = 15 * 1000;
+    var timer = 5 * 60 * 1000;
+
+    var s = document.getElementsByTagName('div'), cur = 0;
+    if (!s) return;
+    function go(n) {
+        cur = n;
+        var i = 1e3, e = s[n];
+        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        e.style.display = 'inline';
+        e.style.fontSize = i + 'px';
+        if (e.firstChild.nodeName === 'IMG') {
+            document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
+            e.firstChild.style.display = 'none';
+        } else {
+            document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        while (
+            e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) {
+            e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
+        }
+        e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
+        if (window.location.hash !== n) window.location.hash = n;
+        document.title = e.textContent || e.innerText;
+    }
+    // document.onclick = function() {
+    //     go(++cur % (s.length));
+    // };
+    document.onkeydown = function(e) {
+        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
+        (e.which === 37) && go(Math.max(0, --cur));
+        (e.which === 32) && play(playing=!playing);
+    };
+    function parse_hash() {
+        return Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+    };
+    function play() {
+        if(playing) {
+            startTimer();
+            document.onclick();
+            setTimeout(play, playrate);
+            document.getElementById("status").innerHTML = "playing"
+        } else {
+            document.getElementById("status").innerHTML = "paused"
+        }
+    };
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
+        if (c !== cur) go(c);
+    };
+    function startTimer() {
+        timer -= 1000;
+        document.getElementById("time").innerHTML = timer / 1000;
+        setTimeout(startTimer,1000);
+        if(timer <= 0) {
+            document.getElementById("status").innerHTML = "STOP!!!!!"
+            document.getElementById("meta").style.color="red";
+        }
+    }
+
+    go(cur);
+};
+</script></head>
+
+<body>
+
+<div class="text">
+<h1>Welcome to Maptime DC!</h1>
+<h2>Esri Story Maps</h2>
+<hr>
+
+<h2>wifi: ESRI-guest</h2>
+<h2>password: CloudGIS</h2>
+<h3>https://www.arcgis.com/home/createaccount.html</h3>
+<h3>www.storymaps.arcgis.com</h3>
+</div>
+
+<div class="imgtwo">
+</div>
+
+<div class="img">
+</div>
+
+<div class="text">
+<h1>what are story maps?</h1>
+<h1> </h1>
+</div>
+
+<div class="text">
+<h1>story maps</h1>
+<hr>
+<h2>elegant ways to combine your web maps and multimedia into an interactive geographical story. bridging the gap between gis and the public understanding.</h2>
+</div>
+
+<div class="text">
+<h1>pushing standards for web design</h1>
+<hr>
+<h2>New York Times</h2>
+<h2>Washington Post</h2>
+<h2>LA Times</h2>
+<h2>Nat Geo Magazine</h2>
+<h2>Google</h2>
+
+
+<h1> </h1>
+</div>
+
+<div class="example1">
+</div>
+
+<div class="example2">
+</div>
+
+<div class="example3">
+</div>
+
+<div class="text">
+<iframe src="http://giphy.com/embed/CyNwabts0egVy?html5=true" width="1000" height="800" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
+<div class="example4">
+</div>
+
+<div class="text">
+<h1>give your map a story it deserves</h1>
+</div>
+
+<div class="text">
+<h1>#storymapthatshit</h1>
+</div>
+
+<div class="text">
+<h1>map tour</h1>
+<h1>map journal</h1>
+<h1>shortlist</h1>
+<h1>side accordion</h1>
+<h1>swipe/spyglass</h1>
+<h1>tabbed</h1>
+<h1>playlist</h1>
+</div>
+
+
+<div class="text">
+<h1>lets take a step backwards.</h1>
+</div>
+
+<div class="text">
+<h1>where does this app list come from...</h1>
+</div>
+
+<div class="text">
+<h1>our workflow</h1>
+<hr>
+<ul>
+    <li>custom stories
+</ul>
+</div>
+
+<div class="text">
+<h1>our workflow</h1>
+<hr>
+<ul>
+    <li>custom stories
+    <li>leading industries and organizations
+</ul>
+</div>
+
+<div class="example5">
+</div>
+
+
+<div class="text">
+<h1>our workflow</h1>
+<hr>
+<ul>
+    <li>custom stories
+    <li>leading industries and organizations
+    <li>why?
+</ul>
+</div>
+
+<div class="text">
+<h1>our workflow</h1>
+<hr>
+<ul>
+    <li>custom stories
+    <li>leading industries and organizations
+    <li>why?
+    <li>matching public expectation...
+</ul>
+</div>
+
+<div class="text">
+<h1>our workflow</h1>
+<hr>
+<ul>
+    <li>custom stories
+    <li>leading industries and organizations
+    <li>why?
+    <li>matching public expectation...with the orgs expectations
+</ul>
+</div>
+
+<div class="text">
+<h1>a mixing pot of good design and user experiences</h1>
+</div>
+
+<div class="text">
+<h1>bundled into focused apps</h1>
+</div>
+
+<div class="text">
+<h1>which is where the real work begins</h1>
+</div>
+
+
+<div class="text">
+<h1>commitment to simplicity</h1>
+<hr>
+<h2>user experience and relentlessly simplify. simplify. simplify</h2>
+</div>
+
+<div class="text">
+<h1>great defaults</h1>
+<hr>
+<h2>layouts, styles, themes, fonts, and more</h2>
+</div>
+
+<div class="text">
+<h1>challenges</h1>
+<ul>
+    <li>two audiences and bridging the gap
+    <li>standards and expectations
+    <li>wide audience with clear focused results
+    <li>custom results from a tool
+</ul>
+</div>
+
+<div class="text">
+<h1>Let's get started!</h1>
+<iframe src="http://giphy.com/embed/ITnn2IenMv7SE?html5=true" width="1000" height="800" frameBorder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
+
+
+<div class="text">
+<h1>jbowen@esri.com</h1>
+<h1>storymaps.arcgis.com</h1>
+</div>
+
+
+
+
+
+
+<footer>storymaps.arcgis.com</footer>
+<span id="meta"><span id="status"></span>  <span id="time"></span></span>
