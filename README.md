@@ -11,4 +11,4 @@ Browse [some photos](https://www.flickr.com/photos/122995914@N04/sets/7215764700
 
 ![maptime](http://content.stamen.com/files/maptime.gif)
 
-![geoweek](http://osmgeoweek.org/img/logo.png)
+![geoweek](http://education.nationalgeographic.com/media/photos/000/334/custom/33426_610x343.jpg)
