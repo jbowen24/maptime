@@ -33,6 +33,15 @@ body {
     right: 0;
     top: 0;
 }
+.logo {
+background-image: url(../images/maptime.gif);
+background-repeat: no-repeat;
+background-position: left;
+background-size: cover;
+width:25%;
+height:25%;
+}
+
 .img {
  background-image: url(../images/office1.jpg);
     background-repeat: no-repeat;
