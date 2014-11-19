@@ -2,6 +2,9 @@
 ###Esri Story Maps 
 
 www.storymaps.arcgis.com
+Browse [the gallery](http://storymaps.arcgis.com/en/gallery/#s=0) to see examples!
+Discover different [Story Map apps](http://storymaps.arcgis.com/en/app-list/)! 
+[Six Steps to Publishing Your Story Map](http://storymaps.arcgis.com/en/articles/publishing-your-story-map/)
 
 Create a free public account: https://www.arcgis.com/home/createaccount.html
 
